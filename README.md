@@ -14,7 +14,7 @@ Aqui estão uma breve descrição sobre eles:
 
 |Letra |Sigla |Nome                                                                       | Definição                                                                        |
 |------|------|---------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| S    | SRP  | *Single Responsibility Principle* (Princípio da Responsabilidade Única)   | Uma classe deve ter um, e somente um, motivo para mudar.                         |
+| S    | SRP  | *Single Responsibility Principle* (Princípio da Responsabilidade Única)   | Uma classe deve ter um, e somente um, motivo para ser alterada.                  |
 | O    | OCP  | *Open / Closed Principle* (Princípio do Aberto/Fechado)                   | Você deve ser capaz de estender um comportamento de uma classe, sem modificá-lo. |
 | L    | LSP  | *Liskov Substitution Principle* (Princípio da Substituição de Liskov)     | As classes base devem ser substituíveis por suas classes derivadas.              |
 | I    | ISP  | *Interface Segregation Principle* (princípio da segregação de Interfaces) | Muitas interfaces específicas são melhores do que uma interface única.           |
@@ -24,20 +24,24 @@ Aqui estão uma breve descrição sobre eles:
 
 Os princípios SOLID devem ser aplicados para se obter os benefícios da orientação a objetos, tais como:
 
-* Seja fácil de se manter, adaptar e se ajustar às alterações de escopo;
-* Seja testável e de fácil entendimento;
-* Seja extensível para alterações com o menor esforço necessário;
-* Que forneça o máximo de reaproveitamento;
-* Que permaneça o máximo de tempo possível em utilização.
+- Seja fácil de se manter, adaptar e se ajustar às constantes alterações exigidas pelos clientes;
+- Seja fácil de entendimento e testar;
+- Seja construído de forma a estar preparado para ser facilmente alterado com o menor esforço possível;
+- Seja possível de ser reaproveitado;
+- Que atenda realmente as necessidades dos clientes para o qual foi criado;
 
 
-Utilizando os princípios SOLID é possível evitar problemas muito comuns:
+Utilizando os princípios SOLID é possível evitar problemas muito comuns como:
 
-* Dificuldade na testabilidade / criação de testes de unidade;
-* Código macarrônico, sem estrutura ou padrão;
-* Dificuldades de isolar funcionalidades;
-* Duplicação de código, uma alteração precisa ser feita em N pontos;
-* Fragilidade, o código quebra facilmente em vários pontos após alguma mudança.
+- Dificuldade na testabilidade / criação de testes de unidade;
+- Código macarrônico, sem estrutura ou padrão;
+- Dificuldades de isolar funcionalidades;
+- Duplicação de código, uma alteração precisa ser feita em N pontos;
+- Fragilidade, o código quebra facilmente em vários pontos após alguma mudança;
+- Erros, Falhas e Defeitos.
+  - Falha: resultado ou manifestação de um ou mais defeitos (diferença indesejável entre o observado e o esperado (defeito encontrado));
+  - Erro (*error*): indica que certas funcionalidades do software não estão se comportando como especificado (engano cometido por serer humanos);
+  - Defeito (*failure*): é a manifestação do erro, seja através de uma tela com uma mensagem para usuário, etc. (resultado de um erro encontrado num código ou num documento).
 
 
 ## Referências:
