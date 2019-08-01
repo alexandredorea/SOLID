@@ -5,8 +5,8 @@ using System;
 namespace SRP.Solucao
 {
     /// <summary>
-    /// Classe que inicia o método Main() para o conceito básico de Singleton
-    /// Singleton Design Pattern
+    /// Classe que inicia o método Main() para o conceito correto do Single Responsibility Principle (SRP)
+    /// Princípio da Responsabilidade Única
     /// </summary>
     internal class Program
     {

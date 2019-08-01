@@ -4,8 +4,8 @@ using System;
 namespace SRP.Violacao
 {
     /// <summary>
-    /// Classe que inicia o método Main() para o conceito básico de Singleton
-    /// Singleton Design Pattern
+    /// Classe que inicia o método Main() para o conceito de violação do Single Responsibility Principle (SRP)
+    /// Princípio da Responsabilidade Única
     /// </summary>
     internal class Program
     {

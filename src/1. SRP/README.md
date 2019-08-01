@@ -4,7 +4,9 @@
 
 Este é o primeiro princípio do SOLID, um dos mais fáceis de entender e de aplicar. Introduzido por Tom DeMarco no livro **Structured Analysis and Systems Specification** (1979), diz basicamente o seguinte:
 
-`"A class should have one, and only one, reason to change"`, ou seja, uma classe deve ter **um, e apenas uma**, razão para ser alterada.
+> A class should have one, and only one, reason to change
+
+Ou seja, uma classe deve ter **um, e apenas uma**, razão para ser alterada.
 
 Observando o princípio da **coesão funcional**, se uma classe só deve ter um motivo para ser modificada, certamente ela também só deve ter uma única responsabilidade, logo:
 
@@ -44,7 +46,7 @@ Alguns benefícios do Princípio de Responsabilidade Única:
 
 **Como deveria ser?**
 
-Veja como a classe poderia ficar após uma refatoração (*refactoring*) de aplicação do Princípio de Responsabilidade Única:
+Veja como a classe poderia ficar após uma refatoração (*refactoring*) da aplicação do Princípio de Responsabilidade Única:
 
 ```csharp
 public class DebitoContaCorrente
@@ -67,13 +69,13 @@ Cada classe tem a sua responsabilidade bem definida.
 
 No início isso pode parecer exagero, mas não é, isto é uma promoção da qualidade do código e uma ótima maneira de obter os benefícios citados acima.
 
-**Conclusão**
+## Conclusão
 
 O Single Responsibility Principle é um dos mais importantes princípios do SOLID, deve ser aplicado para obtermos classes mais coesas e de baixo acoplamento.
 
 Este é o tipo de princípio que todo código orientado a objetos deveria possuir.
 Portanto antes de construir aquela classe que cadastra o usuário e envia o e-mail, lembre-se deste princípio.
 
-**Referência**
+## Referência
 
 1. [SRP: The Single Responsibility Principle](https://docs.google.com/file/d/0ByOwmqah_nuGNHEtcU5OekdDMkk/edit)
