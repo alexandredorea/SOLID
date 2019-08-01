@@ -1,32 +1,32 @@
-# Open Closed Principle ñ OCP
-## PrincÌpio Aberto-Fechado
+# Open Closed Principle ‚Äì OCP
+## Princ√≠pio Aberto-Fechado
 
 
-Este È o segundo princÌpio do SOLID e certamente o princÌpio mais polÍmico, desconhecido e n„o utilizado. Descrito por [Bertrand Meyer] (1988), diz basicamente o seguinte:
+Este √© o segundo princ√≠pio do SOLID e certamente o princ√≠pio mais pol√™mico, desconhecido e n√£o utilizado. Descrito por [Bertrand Meyer] em seu livro **Object Oriented Software Construction**, Prentice Hall, 1988, p. 23, diz basicamente o seguinte:
 
 > Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification
 
-Entidades de software (classes, mÛdulos, funÁıes, etc) devem estar abertas para extens„o, mas fechadas para modificaÁ„o. Em outra palavras, vocÍ deve ser capaz de estender um comportamento de uma classe, sem modific·-lo.
+Entidades de software (classes, m√≥dulos, fun√ß√µes, etc) devem estar abertas para extens√£o, mas fechadas para modifica√ß√£o. Em outra palavras, voc√™ deve ser capaz de estender um comportamento de uma classe, sem modific√°-lo.
 
-Softwares s„o evolutivos, raramente um software È feito uma vez e nunca mais ser· modificado. 
+Softwares s√£o evolutivos, raramente um software √© feito uma vez e nunca mais ser√° modificado. 
 
-> *"O Open Closed Principle, afirma que a concepÁ„o e escrita do cÛdigo devem ser feita de uma forma que a nova funcionalidade deve ser adicionada com mudanÁas mÌnimas no cÛdigo existente; que o projeto deve ser feito de forma a permitir a adiÁ„o de novas funcionalidades como as novas classes, mantendo tanto quanto possÌvel o cÛdigo existente inalterado."*
+> *"O Open Closed Principle, afirma que a concep√ß√£o e escrita do c√≥digo devem ser feita de uma forma que a nova funcionalidade deve ser adicionada com mudan√ßas m√≠nimas no c√≥digo existente; que o projeto deve ser feito de forma a permitir a adi√ß√£o de novas funcionalidades como as novas classes, mantendo tanto quanto poss√≠vel o c√≥digo existente inalterado."*
 
 
-## Onde esse princÌpio tenta chegar?
+## Onde esse princ√≠pio tenta chegar?
 
 
 **Extensibilidade**
 
-… uma das chaves da orientaÁ„o a objetos, quando **um novo comportamento ou funcionalidade precisar ser adicionado** È esperado que **as existentes sejam estendidas** e **n„o alteradas**, assim o cÛdigo original permanece intacto e confi·vel enquanto as novas s„o implementadas atravÈs de extensibilidade. Criar cÛdigo extensÌvel È uma responsabilidade do desenvolvedor maduro, utilizar design duradouro para um software de boa qualidade e manutenibilidade.
+√â uma das chaves da orienta√ß√£o a objetos, quando **um novo comportamento ou funcionalidade precisar ser adicionado** √© esperado que **as existentes sejam estendidas** e **n√£o alteradas**, assim o c√≥digo original permanece intacto e confi√°vel enquanto as novas s√£o implementadas atrav√©s de extensibilidade. Criar c√≥digo extens√≠vel √© uma responsabilidade do desenvolvedor maduro, utilizar design duradouro para um software de boa qualidade e manutenibilidade.
 
 
-**AbstraÁ„o**
+**Abstra√ß√£o**
 
-Quando aprendemos sobre orientaÁ„o a objetos com certeza ouvimos sobre abstraÁ„o, È ela que permite que este princÌpio funcione. Se um software possui abstraÁıes bem definidas logo ele estar· aberto para extens„o.
+Quando aprendemos sobre orienta√ß√£o a objetos com certeza ouvimos sobre abstra√ß√£o, √© ela que permite que este princ√≠pio funcione. Se um software possui abstra√ß√µes bem definidas logo ele estar√° aberto para extens√£o.
 
 
-**Na pr·tica**
+**Na pr√°tica**
 
 Vou usar um exemplo bem simples para podermos entender facilmente como funciona.
 
@@ -45,32 +45,32 @@ public class Debito
         {
             if (tipoConta == TipoConta.Poupanca)
             {
-                // Valida Anivers·rio da Conta
-                // LÛgica para Debita da PoupanÁa
+                // Valida Anivers√°rio da Conta
+                // L√≥gica para Debita da Poupan√ßa
             }
             if (tipoConta == TipoConta.Corrente)
             {
-                // LÛgica para Debita da Conta Corrente
+                // L√≥gica para Debita da Conta Corrente
             }
         }
 }
 ```
 
-… uma classe de dÈbito em conta que valida o tipo da conta para aplicar a regra de negÛcio correta para conta corrente e para conta poupanÁa. Agora vamos supor que surgiu um novo tipo de dÈbito em conta, p.ex., conta investimento; logo seria necess·rio modificar a classe.
+√â uma classe de d√©bito em conta que valida o tipo da conta para aplicar a regra de neg√≥cio correta para conta corrente e para conta poupan√ßa. Agora vamos supor que surgiu um novo tipo de d√©bito em conta, p.ex., conta investimento; logo seria necess√°rio modificar a classe.
 
 
-**Qual È o problema de um IF a mais?**
+**Qual √© o problema de um IF a mais?**
 
-Se modificarmos a classe colocando mais um `IF` de validaÁ„o, alÈm de ter que substituirmos esta classe na publicaÁ„o da nova vers„o, corremos o risco de introduzir alguns *bugs* em uma classe que j· estava funcionando.
+Se modificarmos a classe colocando mais um `IF` de valida√ß√£o, al√©m de ter que substituirmos esta classe na publica√ß√£o da nova vers√£o, corremos o risco de introduzir alguns *bugs* em uma classe que j√° estava funcionando.
 
-AlÈm de ter que testar todos os tipos de dÈbito em conta, um *bug* introduzido nesta modificaÁ„o n„o pararia apenas o dÈbito em conta investimento, mas poderia causar que todos os tipos de dÈbitos parassem de funcionar.
+Al√©m de ter que testar todos os tipos de d√©bito em conta, um *bug* introduzido nesta modifica√ß√£o n√£o pararia apenas o d√©bito em conta investimento, mas poderia causar que todos os tipos de d√©bitos parassem de funcionar.
 
-N„o queremos isso, certo? Na verdade queremos ter o mÌnimo de trabalho possÌvel e maior garantia de qualidade.
+N√£o queremos isso, certo? Na verdade queremos ter o m√≠nimo de trabalho poss√≠vel e maior garantia de qualidade.
 
 
 ## Como deveria ser?
 
-Vamos para um exemplo de um cÛdigo usando abstraÁ„o para gerar **extensibilidade**:
+Vamos para um exemplo de um c√≥digo usando **abstra√ß√£o para gerar extensibilidade**:
 
 
 ```csharp
@@ -83,7 +83,7 @@ public class DebitoContaCorrente : Debito
 {
     public override void Debitar(int valor)
     {
-        // LÛgica para Debita da PoupanÁa
+        // L√≥gica para Debita da Poupan√ßa
     }
 }
 
@@ -91,7 +91,7 @@ public class DebitoContaPoupanca : Debito
 {
     public override void Debitar(int valor)
     {
-        // LÛgica para Debita da Conta Corrente
+        // L√≥gica para Debita da Conta Corrente
     }
 }
 
@@ -99,29 +99,30 @@ public class DebitoContaInvestimento : Debito
 {
     public override void Debitar(int valor)
     {
-        // LÛgica para Debita da Conta de Investimento
+        // L√≥gica para Debita da Conta de Investimento
     }
 }
 ```
 
 
-Veja que possuÌmos agora uma **abstraÁ„o** bem definida, onde todas as **extensıes implementam suas prÛprias regras de negÛcio** sem necessidade de modificar uma funcionalidade devido mudanÁas ou inclus„o de outra.
+Veja que possu√≠mos agora uma **abstra√ß√£o** bem definida, onde todas as **extens√µes implementam suas pr√≥prias regras de neg√≥cio** sem necessidade de modificar uma funcionalidade devido mudan√ßas ou inclus√£o de outra.
 
-O tipo de dÈbito em conta de investimento foi implementado sem modificar nada, usando apenas a extens„o. AlÈm de tudo o cÛdigo est· muito mais bonito, entendÌvel e f·cil para aplicar cobertura de testes de unidade. Vale mencionar que tambÈm est· de acordo com o primeiro princÌpio do SOLID o [SRP]
-
-
-## Conclus„o 
-
-Este princÌpio nos atenta para um melhor design, tornando o software mais extensÌvel e facilitando sua evoluÁ„o sem afetar a qualidade do que j· est· desenvolvido.
-
-Para o uso do Open Closed Principle È muito comum utilizarmos o [Strategy Pattern]() descrito nos [Padrıes de Projetos da Gangue dos Quatro (Gang of Four - GoF)][GOF], prometo explic·-lo em outro momento, apenas para n„o tornar este exemplo muito complexo.
+O tipo de d√©bito em conta de investimento foi implementado sem modificar nada, usando apenas a extens√£o. Al√©m de tudo o c√≥digo est√° muito mais bonito, entend√≠vel e f√°cil para aplicar cobertura de testes de unidade. Vale mencionar que tamb√©m est√° de acordo com o primeiro princ√≠pio do SOLID o [SRP].
 
 
-## ReferÍncias
+## Conclus√£o 
 
-[The Open Closed Principle](https://docs.google.com/file/d/0BwhCYaYDn8EgN2M5MTkwM2EtNWFkZC00ZTI3LWFjZTUtNTFhZGZiYmUzODc1/edit?hl=en)
+Este princ√≠pio nos atenta para um melhor design, tornando o software mais extens√≠vel e facilitando sua evolu√ß√£o sem afetar a qualidade do que j√° est√° desenvolvido.
+
+Para o uso do Open Closed Principle √© muito comum utilizarmos o [Strategy Pattern]() descrito no livro [Padr√µes de Projetos: Solu√ß√µes Reutiliz√°veis de Software Orientados a Objetos][GOF], da ["Gang of Four"(GoF)][GOF Projeto], prometo explic√°-lo em outro momento, apenas para n√£o tornar este exemplo muito complexo.
+
+
+## Refer√™ncias
+
+[OCP: The Open Closed Principle](https://docs.google.com/file/d/0BwhCYaYDn8EgN2M5MTkwM2EtNWFkZC00ZTI3LWFjZTUtNTFhZGZiYmUzODc1/edit?hl=en)
 
 
 [Bertrand Meyer]: <https://en.wikipedia.org/wiki/Bertrand_Meyer>
 [SRP]: <https://github.com/alexandredorea/SOLID/tree/master/src/1.%20SRP>
 [GOF]: <https://en.wikipedia.org/wiki/Design_Patterns>
+[GOF Projeto]: <https://github.com/alexandredorea/GoF>
