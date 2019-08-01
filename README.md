@@ -4,11 +4,11 @@
 
 SOLID é um acrônimo dos cinco primeiros princípios da programação orientada a objetos e design de código identificados por [Robert C. Martin][Uncle Bob] (ou Uncle Bob) por volta do ano 2000. O acrônimo SOLID foi introduzido por [Michael Feathers], após observar que os cinco princípios poderiam se encaixar nesta palavra.
 
-Lembrando também que além destes 5 princípios Robert C. Martin também mapeou 3 outros princípios sobre **Coesão** e mais outros 3 sobre **Acoplamento**, mas não serão abordados.
+Lembrando também que além destes 5 princípios Robert C. Martin também mapeou 3 outros princípios sobre **Coesão** e mais outros 3 sobre **Acoplamento**, mas não serão abordados neste repositório.
 
 ## Objetivo
 
-Os padrões SOLID são considerados uma boa prática de programação orientada a objetos que visam diminuir o acoplamento entre classes e separar responsabilidades como forma de melhorar o código da aplicação desenvolvida. Neste sentido, este pequeno projeto apresentará os padrões que compõem o SOLID - ou seja - este pequeno projeto tem a intenção de demonstrar a teoria e a prática, bem como a violação de cada um dos princípios, como utilizar os mesmos para a solução e demonstrar como o SOLID pode lhe proporcionar um melhor design de código facilitando a manutenção e o teste.
+Os padrões SOLID são considerados uma boa prática de programação orientada a objetos que visam diminuir o acoplamento entre classes e separar responsabilidades como forma de melhorar o código da aplicação desenvolvida. Neste sentido, este pequeno projeto apresentará os padrões que compõem o SOLID - ou seja - este pequeno repositório tem a intenção de demonstrar a teoria e a prática, bem como a violação de cada um dos princípios, como utilizar os mesmos para a solução e demonstrar como o SOLID pode lhe proporcionar um melhor design de código facilitando a manutenção e o teste.
 
 Aqui estão uma breve descrição sobre eles:
 
@@ -17,8 +17,8 @@ Aqui estão uma breve descrição sobre eles:
 | [S][1-SRP] | [SRP][1-SRP] | [*Single Responsibility Principle* (Princípio da Responsabilidade Única)][1-SRP]   | Uma classe deve ter um, e somente um, motivo para ser alterada.                  |
 | [O][2-OCP] | [OCP][2-OCP] | [*Open / Closed Principle* (Princípio do Aberto/Fechado)][2-OCP]                   | Você deve ser capaz de estender um comportamento de uma classe, sem modificá-lo. |
 | [L][3-LSP] | [LSP][3-LSP] | [*Liskov Substitution Principle* (Princípio da Substituição de Liskov)][3-LSP]     | As classes base devem ser substituíveis por suas classes derivadas.              |
-| [I][4-ISP] | [ISP][4-ISP] | [*Interface Segregation Principle* (princípio da segregação de Interfaces)][4-ISP] | Muitas interfaces específicas são melhores do que uma interface única.           |
-| [D][5-DIP] | [DIP][5-DIP] | [*Dependency Inversion Principle* (princípio da inversão de dependência)][5-DIP]   | Dependa de uma abstração e não de uma implementação.                             |
+| [I][4-ISP] | [ISP][4-ISP] | [*Interface Segregation Principle* (Princípio da Segregação de Interfaces)][4-ISP] | Muitas interfaces específicas são melhores do que uma interface única.           |
+| [D][5-DIP] | [DIP][5-DIP] | [*Dependency Inversion Principle* (Princípio da Inversão de Dependência)][5-DIP]   | Dependa de uma abstração e não de uma implementação.                             |
 
 
 ## Justificativas
@@ -47,7 +47,7 @@ Utilizando os princípios SOLID é possível evitar problemas muito comuns como:
 
 ## Referências
 
-1. [Os Princípios de Design Orientado a Objetos](http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod)
+1. [Os Princípios de Padrões Orientado a Objetos](http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod)
 2. [Princípios e Padrões de Projetos](http://www.objectmentor.com/resources/articles/Principles_and_Patterns.pdf)
 3. [SOLID, Wikipedia](https://en.wikipedia.org/wiki/SOLID)
 
