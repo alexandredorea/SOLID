@@ -1,11 +1,10 @@
-﻿using OCP.Violacao.Exemplo._01.Entidades;
-using OCP.Violacao.Exemplo._01.Enumeradores;
+﻿using OCP.Validacao.Exemplo._01.Entidades;
 using System;
 
-namespace OCP.Violacao.Exemplo._01
+namespace OCP.Validacao.Exemplo._01
 {
     /// <summary>
-    /// Classe que inicia o método Main() com violação sobre o conceito 
+    /// Classe que inicia o método Main() com validações sobre o conceito 
     /// Open Closed Principle (OCP) ou Princípio Aberto-Fechado
     /// </summary>
     internal class Program
@@ -15,8 +14,8 @@ namespace OCP.Violacao.Exemplo._01
         /// </summary>
         private static void Main()
         {
-            var cliente = new Cliente();
-            var totalCompra = cliente.ObterDesconto(TipoCliente.Especial, 200);
+            var cliente = new ClienteAssociado();
+            var totalCompra = cliente.ObterDesconto(200);
 
             //Resultado
             Console.WriteLine($"O total da compra é: {totalCompra}.");

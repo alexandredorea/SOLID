@@ -1,11 +1,10 @@
-﻿using OCP.Violacao.Exemplo._01.Entidades;
-using OCP.Violacao.Exemplo._01.Enumeradores;
+﻿using OCP.Validacao.Exemplo._02.Entidades;
 using System;
 
-namespace OCP.Violacao.Exemplo._01
+namespace OCP.Validacao.Exemplo._02
 {
     /// <summary>
-    /// Classe que inicia o método Main() com violação sobre o conceito 
+    /// Classe que inicia o método Main() com validações sobre o conceito 
     /// Open Closed Principle (OCP) ou Princípio Aberto-Fechado
     /// </summary>
     internal class Program
@@ -15,11 +14,11 @@ namespace OCP.Violacao.Exemplo._01
         /// </summary>
         private static void Main()
         {
-            var cliente = new Cliente();
-            var totalCompra = cliente.ObterDesconto(TipoCliente.Especial, 200);
+            var operacao = new ContaCorrente();
+            var numeroTransacao = operacao.Debitar("1234-0", 10);
 
             //Resultado
-            Console.WriteLine($"O total da compra é: {totalCompra}.");
+            Console.WriteLine($"O número da transação gerado foi: {numeroTransacao}.");
 
             //Aguarda o usuário
             Console.ReadKey();

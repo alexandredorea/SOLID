@@ -18,6 +18,12 @@ namespace OCP.Violacao.Exemplo._02.Entidades
                 // Lógica para Debita da Conta Corrente
                 Console.WriteLine($"A conta corrente, número: {conta}, foi debitado um valor de {valor}.");
             }
+            /*
+            if (tipoConta == TipoConta.Investimento)
+            {
+                Console.WriteLine($"A conta investimento, número: {conta}, foi debitado um valor de {valor}.");
+            }
+            */
         }
     }
 }
